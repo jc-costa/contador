@@ -27,6 +27,19 @@ function contadordepomodoro() {
     document.getElementById("som").play();
   }
 }
+
+<-!create a function that countdown from 5 minutes to zero-!>
+function countdown() {
+  if (tempo < 5) {
+    tempo = tempo + 1;
+    document.getElementById("tempo").innerHTML = tempo;
+  } else {
+    tempo = 0;
+    document.getElementById("tempo").innerHTML = tempo;
+    document.getElementById("som").play();
+  }
+}
+
 </script>
 
 </head>
@@ -37,6 +50,10 @@ function contadordepomodoro() {
 <p id="contador">0</p>
 <button onclick="contadordepomodoro()">Contador</button>
 <audio id="som" src="som.mp3"></audio>
+<p>Quando o tempo chegar a 5 minutos, o som será tocado.</p>
+<p id="tempo">0</p>
+<button onclick="countdown()">Timer</button>
+
 </body>
 
 </html>
